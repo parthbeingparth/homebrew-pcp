@@ -2,7 +2,7 @@ class Pcp < Formula
   desc "Performance Co-Pilot is a system performance and analysis framework"
   homepage "https://pcp.io/"
   url "https://github.com/Warewolf96/homebrew-pcp/blob/master/pcp-4.1.0.src.tar.gz"
-  sha256 "f8db48a5460a405f6ca480d531ddfd1d41b152bfdf970b5df36773ee6f9f5414"
+  sha256 "37c746fe89b711a44439b1bbad2a0d040f1f0f930376e534e1ae15b1fa83f329"
   depends_on "xz" => :build
   depends_on "cairo"
   depends_on "libmicrohttpd"
