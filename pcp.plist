@@ -5,10 +5,10 @@
     <key>RunAtLoad</key>         <true/>
     <key>KeepAlive</key>         <true/>
     <key>Label</key>             <string>io.pcp.startup</string>
-    <key>Program</key>
-    <string>/usr/local/Cellar/pcp/4.0.3/etc/init.d/pmcd</string>
+    
     <key>ProgramArguments</key>
         <array>
+        	<string>/usr/local/Cellar/pcp/4.0.3/etc/init.d/pmcd</string>
             <string>start</string>
         </array>
 </dict>
