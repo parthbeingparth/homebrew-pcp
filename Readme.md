@@ -1,1 +1,1 @@
-This repo is a test for pcp packaging. More details will be updates shortly.
+This repo is a test for pcp packaging. More details will be updated shortly.
