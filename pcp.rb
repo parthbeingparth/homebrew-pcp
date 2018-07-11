@@ -13,9 +13,6 @@ class Pcp < Formula
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
-
-    include.install "/usr/local/opt/pcp/lib/"
-    MachO::Tools.change_dylib_id("#{lib}/libpcp_web.dylib.1", "#{lib}/libpcp_webq.1.dylib")
   end
 
   test do
