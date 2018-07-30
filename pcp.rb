@@ -1,8 +1,8 @@
 class Pcp < Formula
   desc "Performance Co-Pilot is a system performance and analysis framework"
   homepage "https://pcp.io/"
-  url "https://dl.bintray.com/pcp/source/pcp-4.1.0.src.tar.gz"
-  sha256 "0456e6163dd5a530d6b042bf56e54dc2fa0f9e60c8e7ff559eaa15d362f2d2f2"
+  url "https://github.com/Warewolf96/homebrew-pcp/blob/master/pcp-4.1.1.src.tar.gz"
+  sha256 "485ce06ab82bd18f303635d9446aac3b9571781d3120b71fea22fefc74e73691"
   depends_on "pkg-config" => :build
   depends_on "nss"
   depends_on "python"
@@ -11,7 +11,7 @@ class Pcp < Formula
   depends_on "xz"
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "CC=clang", "CXX=clang", "--without-manager"
     system "make", "install"
   end
 
