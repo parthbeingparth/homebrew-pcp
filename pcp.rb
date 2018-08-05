@@ -42,15 +42,6 @@ class Pcp < Formula
                 <string>/etc/pcp.conf</string>
             </array>
 
-        <key>ProgramArguments</key>
-        <array>
-            <string>ln</string>
-            <string>-s</string>
-            <string>/usr/local/Cellar/pcp/4.1.1/etc/pcp.env</string>
-            <string>/etc/pcp.env</string>
-        </array>
-
-
     </dict>
     </plist>
   EOS
