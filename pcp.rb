@@ -3,6 +3,7 @@ class Pcp < Formula
   homepage "https://pcp.io/"
   url "https://dl.bintray.com/pcp/source/pcp-4.1.1.src.tar.gz"
   sha256 "430c3ce05db5e475dc0d962ac584a61a91c69b791e66d5cc684a7aada3e21f52"
+  
   depends_on "pkg-config" => :build
   depends_on "nss"
   depends_on "python"
@@ -47,6 +48,6 @@ class Pcp < Formula
   EOS
   end
   test do
-    system "#{bin}/pcp", "--version"
+    system "/usr/local/Cellar/pcp/4.1.1/etc/init.d/pmcd", "start"
   end
 end
