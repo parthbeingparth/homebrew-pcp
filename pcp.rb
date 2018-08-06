@@ -12,7 +12,7 @@ class Pcp < Formula
   depends_on "xz"
 
   def install
-    system "./configure", "--prefix=#{prefix}", , "CC=clang", "CXX=clang"
+    system "./configure", "--prefix=#{prefix}", "CC=clang", "CXX=clang"
   end
 
   plist_options :manual => "pcp"
