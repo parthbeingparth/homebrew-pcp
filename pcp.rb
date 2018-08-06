@@ -12,7 +12,8 @@ class Pcp < Formula
   depends_on "xz"
 
   def install
-    system "./configure", "--prefix=#{prefix}", "CC=clang", "CXX=clang"
+    system "./configure", "--prefix=#{prefix}", "CC=clang", "CXX=clang", "--without-manager"
+    system "make", "install"
   end
 
   plist_options :manual => "pcp"
@@ -26,17 +27,27 @@ class Pcp < Formula
         <key>KeepAlive</key>         <true/>
         <key>Label</key>             <string>io.pcp.startup</string>
         
-    <key>ProgramArguments</key>
-        <array>
-            <string>/usr/local/Cellar/pcp/4.1.1/etc/init.d/pmcd</string>
-            <string>start</string>
-        </array>
+        <key>ProgramArguments</key>
+            <array>
+              <string>ln</string>
+                <string>-s</string>
+                <string>/usr/local/Cellar/pcp/4.1.1/etc/pcp.env</string>
+                <string>/etc/pcp.env</string>
+            </array>
+
+        <key>ProgramArguments</key>
+            <array>
+              <string>ln</string>
+                <string>-s</string>
+                <string>/usr/local/Cellar/pcp/4.1.1/etc/pcp.conf</string>
+                <string>/etc/pcp.conf</string>
+            </array>
 
     </dict>
     </plist>
   EOS
   end
   test do
-    system "#{bin}/pcp", "--version"
+    system "/usr/local/Cellar/pcp/4.1.1/etc/init.d/pmcd", "start"
   end
 end
