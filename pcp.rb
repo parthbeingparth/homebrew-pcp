@@ -12,7 +12,7 @@ class Pcp < Formula
   depends_on "xz"
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--without-manager"
   end
 
   plist_options :manual => "pcp"
