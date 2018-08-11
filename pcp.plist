@@ -8,7 +8,7 @@
     
     <key>ProgramArguments</key>
         <array>
-        	<string>/usr/local/Cellar/pcp/4.0.3/etc/init.d/pmcd</string>
+        	<string>/usr/local/Cellar/pcp/4.1.1/etc/init.d/pmcd</string>
             <string>start</string>
         </array>
 </dict>
