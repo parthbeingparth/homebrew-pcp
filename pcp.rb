@@ -2,7 +2,7 @@ class Pcp < Formula
   desc "Performance Co-Pilot is a system performance and analysis framework"
   homepage "https://pcp.io/"
   url "https://dl.bintray.com/pcp/source/pcp-4.1.3.src.tar.gz"
-  sha256 "430c3ce05db5e475dc0d962ac584a61a91c69b791e66d5cc684a7aada3e21f52"
+  sha256 "ca593d65ccaf6f481d55720019e317679afeadd589aa37c878ec1e8629a1e75c"
   
   depends_on "pkg-config" => :build
   depends_on "nss"
