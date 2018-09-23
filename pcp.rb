@@ -29,8 +29,18 @@ class Pcp < Formula
         
         <key>ProgramArguments</key>
             <array>
-                <string>/usr/local/Cellar/pcp/4.1.1/etc/init.d/pmcd</string>
-                <string>start</string>
+              <string>ln</string>
+                <string>-s</string>
+                <string>/usr/local/Cellar/pcp/4.1.1/etc/pcp.env</string>
+                <string>/etc/pcp.env</string>
+            </array>
+
+        <key>ProgramArguments</key>
+            <array>
+              <string>ln</string>
+                <string>-s</string>
+                <string>/usr/local/Cellar/pcp/4.1.1/etc/pcp.conf</string>
+                <string>/etc/pcp.conf</string>
             </array>
 
     </dict>
