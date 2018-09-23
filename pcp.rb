@@ -3,7 +3,7 @@ class Pcp < Formula
   homepage "https://pcp.io/"
   url "https://dl.bintray.com/pcp/source/pcp-4.1.3.src.tar.gz"
   sha256 "ca593d65ccaf6f481d55720019e317679afeadd589aa37c878ec1e8629a1e75c"
-  
+
   depends_on "pkg-config" => :build
   depends_on "nss"
   depends_on "python"
@@ -26,7 +26,7 @@ class Pcp < Formula
         <key>RunAtLoad</key>         <true/>
         <key>KeepAlive</key>         <true/>
         <key>Label</key>             <string>io.pcp.startup</string>
-        
+
         <key>ProgramArguments</key>
             <array>
               <string>ln</string>
